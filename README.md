@@ -6,7 +6,7 @@
 Клонируем проект через Git (cli) или через какое нибудь сторонниеприложение:
 
 ```bash
-$ git clone git@github.com:yodepro/Ishimitsu14/Note-App
+$ git clone git@github.com:Ishimitsu14/Note-App.git
 ```
 
 В корне проекта находиться файл .env.example
