@@ -1,0 +1,17 @@
+server {
+    listen 80;
+    server_name ${COMPOSE_PROJECT_NAME};
+
+    charset utf-8;
+    index index.html index.htm;
+
+    set $base_root /var/www/${COMPOSE_PROJECT_NAME};
+    root $base_root/dist;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    error_log  /var/log/nginx/${COMPOSE_PROJECT_NAME}_error.log;
+    access_log /var/log/nginx/${COMPOSE_PROJECT_NAME}_access.log;
+}
